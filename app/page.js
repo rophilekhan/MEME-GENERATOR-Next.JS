@@ -17,9 +17,11 @@ const Page = async () => {
       <section className='mx-auto container'>
         <div className='flex flex-wrap justify-between mt-10 gap-3'>
           {data.data.memes.map((item) => (
-            <div key={item.id}>
+            <div className='justify-center items-center' key={item.id}>
               <Image src={item.url} alt={item.name} height={300} width={300} priority={true} />
-              <p className='text-center font-bold text-xl mt-5 mb-3'>{item.name}</p>
+              <p className='text-center font-bold text-xl mt-5 mb-3'>{item.name} 
+                <button className=" btn btn-sm btn-neutral ml-7"> Edit</button></p>
+              
             </div>
           ))}
         </div>
